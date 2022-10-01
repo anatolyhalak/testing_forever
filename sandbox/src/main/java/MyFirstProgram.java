@@ -6,3 +6,4 @@ public class MyFirstProgram {
     }
 }
 
+//проба комментария

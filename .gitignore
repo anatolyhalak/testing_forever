@@ -1,6 +1,7 @@
 .gradle
 build/
 .DS_Store/
+testing_forever.iml/
 
 # Ignore Gradle GUI config
 gradle-app.setting
