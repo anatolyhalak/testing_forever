@@ -1,9 +1,11 @@
-package ru.stqa.pft.sandbox;
+package ru.stqa.pft.sandbox; //декларация пакета
 
-public class MyFirstProgram {
+public class MyFirstProgram { //декларация класса
 
-    public static void main(String[] args){
-        System.out.println("Hello, world!");
+    //ниже находится описание функции находящейся внутри этого класса
+    public static void main(String[] args) { //после имени функции находятся круглые скобки, в которых перечисляются параметры функции
+        //ниже находится содержимое функции
+        System.out.println("Hello, world!"); //исполяемы код, список конструкции, выражений
 
     }
 }
