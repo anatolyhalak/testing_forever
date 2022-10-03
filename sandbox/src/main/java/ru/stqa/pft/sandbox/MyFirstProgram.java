@@ -12,11 +12,10 @@ public class MyFirstProgram { //декларация класса
 
         Rectangle r = new Rectangle(4, 6);
         System.out.println("Площадь прямоугольника со сторонами " + r.a + " и " + r.b + " = " + r.area());
+
     }
     public static void hello(String somebody) {
         System.out.println("Hello, " + somebody + "!");
     }
+
 }
-
-
-//проба комментария
