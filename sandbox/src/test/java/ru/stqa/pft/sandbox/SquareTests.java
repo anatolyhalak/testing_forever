@@ -11,3 +11,5 @@ public class SquareTests {
     assertEquals(s.area(),25.0);
   }
 }
+
+//Первый тест, используя фреймворк для запуска тестов TestNG
