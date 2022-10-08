@@ -12,3 +12,5 @@ TestNG Gradle - https://search.maven.org/artifact/org.testng/testng/7.6.1/jar </
 Официальный сайт XAMPP - https://www.apachefriends.org/ru/index.html 
 Инструкция1  по установке и настройке XAMPP - https://webdriver.ru/blog/2015-05-21-installing-xampp/
 Инструкция2 по установке и настройке XAMPP - https://web--revenue-ru.turbopages.org/web-revenue.ru/s/instrumenti/xampp
+### Katalon Recorder для Chrome:
+https://chrome.google.com/webstore/detail/katalon-recorder-selenium/ljdobmomdgdljniojadhoplhkpialdid 
