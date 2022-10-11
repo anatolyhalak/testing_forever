@@ -18,3 +18,6 @@ https://chrome.google.com/webstore/detail/katalon-recorder-selenium/ljdobmomdgdl
 https://addons.mozilla.org/en-US/firefox/addon/katalon-automation-record/
 ### ChromeDriver для Chrome:
 скачать хромдрайвер https://chromedriver.chromium.org/downloads
+### Geckodriver для Firefox:
+https://github.com/mozilla/geckodriver/releases
+
