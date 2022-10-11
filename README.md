@@ -14,6 +14,7 @@ XAMPP для M1 https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.2
 Инструкция1  по установке и настройке XAMPP - https://webdriver.ru/blog/2015-05-21-installing-xampp/
 Инструкция2 по установке и настройке XAMPP - https://web--revenue-ru.turbopages.org/web-revenue.ru/s/instrumenti/xampp
 ### Katalon Recorder для Chrome:
-https://chrome.google.com/webstore/detail/katalon-recorder-selenium/ljdobmomdgdljniojadhoplhkpialdid 
+https://chrome.google.com/webstore/detail/katalon-recorder-selenium/ljdobmomdgdljniojadhoplhkpialdid
+https://addons.mozilla.org/en-US/firefox/addon/katalon-automation-record/
 ### ChromeDriver для Chrome:
 скачать хромдрайвер https://chromedriver.chromium.org/downloads

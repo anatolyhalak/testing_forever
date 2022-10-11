@@ -2,16 +2,13 @@ apply plugin: 'java'
 
 repositories {
     mavenCentral()
-    maven {
-        url 'https://repo.clojars.org'
-        name 'Clojars'
-    }
 }
 
 dependencies {
     implementation 'org.testng:testng:7.6.1'
     implementation 'org.seleniumhq.selenium:selenium-java:4.5.0'
-    implementation 'org.seleniumhq.webdriver:webdriver-chrome:0.9.7376'
-    implementation 'com.github.chunfulandu:duration-profiler:0.2.0'
-    implementation 'clj-duration:clj-duration:1.0.0'
 }
+
+test {
+      useTestNG()
+  }
