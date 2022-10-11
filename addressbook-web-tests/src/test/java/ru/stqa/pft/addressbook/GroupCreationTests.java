@@ -19,7 +19,7 @@ public class GroupCreationTests {
 
   @BeforeClass(alwaysRun = true)
   public void setUp() throws Exception {
-    System.setProperty("webdriver.chrome.driver", "/Users/anatolykhalak/Github-desktop/java_test/testing_forever/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook");
+    System.setProperty("webdriver.chrome.driver", "");
     driver = new ChromeDriver();
     baseUrl = "https://www.google.com/";
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
