@@ -17,6 +17,11 @@ public class GroupCreationTests {
     wd = new FirefoxDriver();
     wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     wd.get("http://localhost/addressbook/index.php");
+    login();
+  }
+
+
+  private void login() {
     wd.findElement(By.name("user")).click();
     wd.findElement(By.name("user")).click();
     wd.findElement(By.name("user")).clear();
@@ -25,13 +30,30 @@ public class GroupCreationTests {
     wd.findElement(By.name("pass")).clear();
     wd.findElement(By.name("pass")).sendKeys("secret");
     wd.findElement(By.xpath("//input[@value='Login']")).click();
+    wd.findElement(By.id("container")).click();
   }
 
   @Test
   public void testGroupCreation() throws Exception {
-    wd.findElement(By.id("container")).click();
+    gotoGroupPage();
+    initGroupCreation();
+    fillGroupForm();
+    submitGroupCreation();
+    reternToGroupPage();
+  }
+
+  private void reternToGroupPage() {
     wd.findElement(By.linkText("groups")).click();
-    wd.findElement(By.name("new")).click();
+    wd.findElement(By.linkText("Logout")).click();
+    wd.findElement(By.id("LoginForm")).click();
+    wd.findElement(By.xpath("//*/text()[normalize-space(.)='']/parent::*")).click();
+  }
+
+  private void submitGroupCreation() {
+    wd.findElement(By.name("submit")).click();
+  }
+
+  private void fillGroupForm() {
     wd.findElement(By.name("group_name")).click();
     wd.findElement(By.name("group_name")).clear();
     wd.findElement(By.name("group_name")).sendKeys("test11");
@@ -41,11 +63,14 @@ public class GroupCreationTests {
     wd.findElement(By.name("group_footer")).click();
     wd.findElement(By.name("group_footer")).clear();
     wd.findElement(By.name("group_footer")).sendKeys("test33");
-    wd.findElement(By.name("submit")).click();
+  }
+
+  private void initGroupCreation() {
+    wd.findElement(By.name("new")).click();
+  }
+
+  private void gotoGroupPage() {
     wd.findElement(By.linkText("groups")).click();
-    wd.findElement(By.linkText("Logout")).click();
-    wd.findElement(By.id("LoginForm")).click();
-    wd.findElement(By.xpath("//*/text()[normalize-space(.)='']/parent::*")).click();
   }
 
   @AfterMethod(alwaysRun = true)
