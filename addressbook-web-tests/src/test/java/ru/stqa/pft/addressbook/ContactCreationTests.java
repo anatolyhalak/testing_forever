@@ -20,6 +20,10 @@ public class ContactCreationTests {
     wd = new FirefoxDriver();
     wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     wd.get("http://localhost/addressbook/index.php");
+    login();
+  }
+
+  private void login() {
     wd.findElement(By.name("user")).click();
     wd.findElement(By.name("user")).clear();
     wd.findElement(By.name("user")).sendKeys("admin");
@@ -30,8 +34,26 @@ public class ContactCreationTests {
 
   @Test
   public void testContactCreation() throws Exception {
-    wd.findElement(By.id("content")).click();
-    wd.findElement(By.linkText("add new")).click();
+    gotoContactPage();
+    fillContactForm();
+    submitContactCreation();
+    returnToContactPage();
+    exitToStartPage();
+  }
+
+  private void exitToStartPage() {
+    wd.findElement(By.linkText("Logout")).click();
+  }
+
+  private void returnToContactPage() {
+    wd.findElement(By.linkText("home page")).click();
+  }
+
+  private void submitContactCreation() {
+    wd.findElement(By.xpath("//div[@id='content']/form/input[21]")).click();
+  }
+
+  private void fillContactForm() {
     wd.findElement(By.name("firstname")).click();
     wd.findElement(By.name("firstname")).clear();
     wd.findElement(By.name("firstname")).sendKeys("Tony");
@@ -47,9 +69,11 @@ public class ContactCreationTests {
     wd.findElement(By.name("email")).click();
     wd.findElement(By.name("email")).clear();
     wd.findElement(By.name("email")).sendKeys("TontStark@gmail.com");
-    wd.findElement(By.xpath("//div[@id='content']/form/input[21]")).click();
-    wd.findElement(By.linkText("home page")).click();
-    wd.findElement(By.linkText("Logout")).click();
+  }
+
+  private void gotoContactPage() {
+    wd.findElement(By.id("content")).click();
+    wd.findElement(By.linkText("add new")).click();
   }
 
   @AfterMethod(alwaysRun = true)
